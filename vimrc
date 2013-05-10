@@ -1,4 +1,17 @@
 set nocompatible  " Use Vim settings, rather then Vi settings
+filetype off                   " required!
+
+set rtp+=~/.vim/bundle/vundle/
+call vundle#rc()
+
+Bundle 'gmarik/vundle'
+Bundle 'tpope/vim-fugitive'
+Bundle 'Lokaltog/vim-easymotion'
+Bundle 'tpope/vim-rails.git'
+Bundle 'tpope/vim-surround'
+
+filetype plugin indent on     " required!
+filetype on
 set nobackup
 set nowritebackup
 set history=50
@@ -14,3 +27,4 @@ set tabpagemax=30
 
 " Display extra whitespace
 set list listchars=tab:»·,trail:·
+
