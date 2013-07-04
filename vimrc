@@ -15,8 +15,8 @@ Bundle 'tpope/vim-bundler'
 Bundle 'tpope/vim-cucumber'
 Bundle 'tpope/vim-endwise'
 Bundle 'tpope/vim-fugitive'
-Bundle 'kien/ctrlp.vim'
 Bundle 'thoughtbot/vim-rspec'
+Bundle 'kchmck/vim-coffee-script'
 
 filetype plugin indent on     " required!
 filetype on
@@ -46,5 +46,3 @@ nnoremap <Leader>s :call RunNearestSpec()<CR>
 nnoremap <Leader>l :call RunLastSpec()<CR>
 
 au BufRead,BufNewFile *.md set filetype=markdown
-
-
