@@ -17,6 +17,7 @@ Bundle 'tpope/vim-endwise'
 Bundle 'tpope/vim-fugitive'
 Bundle 'thoughtbot/vim-rspec'
 Bundle 'kchmck/vim-coffee-script'
+Bundle 'ingydotnet/yaml-vim'
 
 filetype plugin indent on     " required!
 filetype on

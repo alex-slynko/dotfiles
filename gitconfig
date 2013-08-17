@@ -13,3 +13,5 @@
   ui = auto
 [diff]
   wordRegex = [^[:space:]]
+[init]
+	templatedir = ~/.git_template
