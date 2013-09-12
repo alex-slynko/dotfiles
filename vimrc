@@ -8,16 +8,13 @@ call vundle#rc()
 Bundle 'gmarik/vundle'
 Bundle 'vim-ruby/vim-ruby'
 Bundle 'tpope/vim-fugitive'
-Bundle 'Lokaltog/vim-easymotion'
 Bundle 'tpope/vim-rails.git'
 Bundle 'tpope/vim-surround'
 Bundle 'tpope/vim-bundler'
 Bundle 'tpope/vim-cucumber'
 Bundle 'tpope/vim-endwise'
 Bundle 'tpope/vim-fugitive'
-Bundle 'thoughtbot/vim-rspec'
 Bundle 'kchmck/vim-coffee-script'
-Bundle 'ingydotnet/yaml-vim'
 
 filetype plugin indent on     " required!
 filetype on
@@ -41,9 +38,5 @@ set list listchars=tab:»·,trail:·
 autocmd User Rails Rnavcommand step features/step_definitions -glob=**/* -suffix=_steps.rb
 autocmd User Rails Rnavcommand config config -glob=**/* -suffix=.rb -default=routes
 nnoremap <leader><leader> <c-^>
-
-nnoremap <Leader>t :call RunCurrentSpecFile()<CR>
-nnoremap <Leader>s :call RunNearestSpec()<CR>
-nnoremap <Leader>l :call RunLastSpec()<CR>
 
 au BufRead,BufNewFile *.md set filetype=markdown
