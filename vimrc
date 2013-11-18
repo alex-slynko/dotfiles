@@ -15,6 +15,7 @@ Bundle 'tpope/vim-cucumber'
 Bundle 'tpope/vim-endwise'
 Bundle 'tpope/vim-fugitive'
 Bundle 'kchmck/vim-coffee-script'
+Bundle 'elzr/vim-json'
 
 filetype plugin indent on     " required!
 filetype on
