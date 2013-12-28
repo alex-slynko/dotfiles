@@ -9,13 +9,11 @@ Bundle 'gmarik/vundle'
 Bundle 'vim-ruby/vim-ruby'
 Bundle 'tpope/vim-fugitive'
 Bundle 'tpope/vim-rails.git'
-Bundle 'tpope/vim-surround'
-Bundle 'tpope/vim-bundler'
 Bundle 'tpope/vim-cucumber'
-Bundle 'tpope/vim-endwise'
 Bundle 'tpope/vim-fugitive'
 Bundle 'kchmck/vim-coffee-script'
 Bundle 'elzr/vim-json'
+Bundle 'PProvost/vim-ps1'
 
 filetype plugin indent on     " required!
 filetype on
@@ -23,7 +21,7 @@ syntax enable
 set nobackup
 set noswapfile
 set nowritebackup
-set history=50
+set history=500
 set ruler         " show the cursor position all the time
 set showcmd       " display incomplete commands
 set incsearch     " do incremental searching

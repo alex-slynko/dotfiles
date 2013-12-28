@@ -59,3 +59,7 @@ export EDITOR=vim
 export VISUAL=vim
 
 export CLASSPATH=~/shit/junit.jar
+export LOLCOMMITS_ANIMATE=5
+export LOLCOMMITS_FORK=true
+export LOLCOMMITS_STEALH=true
+

@@ -15,3 +15,5 @@
   wordRegex = [^[:space:]]
 [init]
 	templatedir = ~/.git_template
+[alias]
+	ready = !git fetch && git rebase origin/master && git push
