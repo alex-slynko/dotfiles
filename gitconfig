@@ -17,3 +17,16 @@
 	templatedir = ~/.git_template
 [alias]
 	ready = !git fetch && git rebase origin/master && git push
+	start = !jira_start
+[help]
+	autocorrect = 1
+[advice]
+	statusHints = false
+[branch]
+	autosetuprebase = always
+[fetch]
+	prune = true
+[pull]
+	rebase = true
+[rebase]
+	autostash = true

@@ -14,6 +14,7 @@ Bundle 'tpope/vim-fugitive'
 Bundle 'kchmck/vim-coffee-script'
 Bundle 'elzr/vim-json'
 Bundle 'PProvost/vim-ps1'
+Bundle 'thoughtbot/vim-rspec'
 
 filetype plugin indent on     " required!
 filetype on
@@ -39,3 +40,7 @@ autocmd User Rails Rnavcommand config config -glob=**/* -suffix=.rb -default=rou
 nnoremap <leader><leader> <c-^>
 
 au BufRead,BufNewFile *.md set filetype=markdown
+map <Leader>t :call RunCurrentSpecFile()<CR>
+map <Leader>s :call RunNearestSpec()<CR>
+map <Leader>l :call RunLastSpec()<CR>
+map <Leader>a :call RunAllSpecs()<CR>
