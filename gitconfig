@@ -16,8 +16,10 @@
 [init]
 	templatedir = ~/.git_template
 [alias]
-	ready = !git fetch && git rebase origin/master && git push
+	ready = !jira_autocommit && git fetch && git rebase origin/master && git push
 	start = !jira_start
+  autocommit = !jira_autocommit
+  cleanup = !git checkout master && git pull && git branch  --merged  master | grep -v 'master$' | xargs  git  branch  -d
 [help]
 	autocorrect = 1
 [advice]
@@ -30,3 +32,7 @@
 	rebase = true
 [rebase]
 	autostash = true
+[log]
+  decorate = true
+[format]
+  pretty = oneline
