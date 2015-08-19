@@ -7,8 +7,9 @@ call vundle#rc()
 
 Plugin 'gmarik/vundle'
 Plugin 'vim-ruby/vim-ruby'
-Plugin 'tpope/vim-fugitive'
 Plugin 'tpope/vim-rails.git'
+Plugin 'tpope/vim-rake.git'
+Plugin 'tpope/vim-projectionist.git'
 Plugin 'tpope/vim-cucumber'
 Plugin 'tpope/vim-fugitive'
 Plugin 'kchmck/vim-coffee-script'
@@ -20,6 +21,7 @@ Plugin 'DrTom/fsharp-vim'
 filetype plugin indent on     " required!
 filetype on
 syntax enable
+
 set nobackup
 set noswapfile
 set nowritebackup
@@ -34,7 +36,7 @@ set shiftwidth=2
 set expandtab
 set tabpagemax=30
 set rulerformat=%55(%{strftime('%a\ %b\ %e\ %I:%M\ %p')}\ %5l,%-6(%c%V%)\ %P%)
-set autowrite
+set autowrite     " write on running commands
 
 " Display extra whitespace
 set list listchars=tab:»·,trail:·
@@ -58,8 +60,25 @@ function! InsertTabWrapper()
   endif
 endfunction
 inoremap <Tab> <c-r>=InsertTabWrapper()<cr>
+
 nnoremap <C-j> <C-w>j
 nnoremap <C-k> <C-w>k
 nnoremap <C-h> <C-w>h
 nnoremap <C-l> <C-w>l
-map <Leader>r :!rubocop -R %<CR>
+
+function RunLinter()
+  if &filetype == "scss"
+    execute "!bundle exec scss-lint %"
+  elseif &filetype == "haml"
+    execute "!bundle exec haml-lint %"
+  else
+    execute "!bundle exec  rubocop %"
+  endif
+endfunction
+
+map <Leader>f :!foodcritic %<CR>
+map <Leader>h :!bundle exec haml-lint %<CR>
+map <Leader>r :call RunLinter()<CR>
+map <Leader>c :!xbuild<CR>
+
+set backspace=indent,eol,start

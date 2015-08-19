@@ -13,6 +13,7 @@
   ui = auto
 [diff]
   wordRegex = [^[:space:]]
+  algorithm = patience
 [init]
 	templatedir = ~/.git_template
 [alias]
@@ -20,6 +21,11 @@
 	start = !jira_start
   autocommit = !jira_autocommit
   cleanup = !git checkout master && git pull && git branch  --merged  master | grep -v 'master$' | xargs  git  branch  -d
+  draft = !git push origin HEAD:refs/drafts/master
+  gerritconfig=!git fetch origin refs/meta/config && git checkout FETCH_HEAD && vim project.config && git commit -a && git push origin HEAD:refs/meta/config
+  review = !git push origin HEAD:refs/for/master
+  review-complete = !git commit --amend -a && git review
+  review-state = !jira_autocommit && git review
 [help]
 	autocorrect = 1
 [advice]
@@ -36,3 +42,5 @@
   decorate = true
 [format]
   pretty = oneline
+[rerere]
+	enabled = true
