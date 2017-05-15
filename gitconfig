@@ -1,8 +1,11 @@
-[user]
-  email = alex.slynko@wonga.com
-  name = Alex Slynko
+[alias]
+  cleanup = !git checkout master && git pull && git branch  --merged  master | grep -v 'master$' | xargs  git  branch  -d
+  unstage = reset HEAD
+[apply]
+  whitespace = nowarn
 [core]
-	editor = /usr/bin/vim
+    pager = /usr/local/opt/git/share/git-core/contrib/diff-highlight/diff-highlight | less
+    editor = /usr/local/bin/nvim
 [push]
   default = current
 [color "status"]
@@ -14,18 +17,6 @@
 [diff]
   wordRegex = [^[:space:]]
   algorithm = patience
-[init]
-	templatedir = ~/.git_template
-[alias]
-	ready = !jira_autocommit && git fetch && git rebase origin/master && git push
-	start = !jira_start
-  autocommit = !jira_autocommit
-  cleanup = !git checkout master && git pull && git branch  --merged  master | grep -v 'master$' | xargs  git  branch  -d
-  draft = !git push origin HEAD:refs/drafts/master
-  gerritconfig=!git fetch origin refs/meta/config && git checkout FETCH_HEAD && vim project.config && git commit -a && git push origin HEAD:refs/meta/config
-  review = !git push origin HEAD:refs/for/master
-  review-complete = !git commit --amend -a && git review
-  review-state = !jira_autocommit && git review
 [help]
 	autocorrect = 1
 [advice]
@@ -44,3 +35,5 @@
   pretty = oneline
 [rerere]
 	enabled = true
+[http "https://gopkg.in"]
+    followRedirects = true
