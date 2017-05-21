@@ -40,3 +40,4 @@ let g:go_fmt_fail_silently = 1
 let g:go_fmt_experimental = 1
 
 let g:deoplete#sources#go#align_class = 1
+nnoremap <unique> <expr> <CR> empty(&buftype) ? ':w<CR>' : '<CR>'
