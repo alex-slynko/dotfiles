@@ -1,6 +1,8 @@
 [alias]
   cleanup = !git checkout master && git pull && git branch  --merged  master | grep -v 'master$' | xargs  git  branch  -d
   unstage = reset HEAD
+  st = status
+
 [apply]
   whitespace = nowarn
 [core]
