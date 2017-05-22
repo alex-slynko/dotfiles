@@ -1,3 +1,7 @@
+syntax enable
+filetype on
+filetype plugin indent on
+
 set showcmd " show current command
 
 " We need a new leader
