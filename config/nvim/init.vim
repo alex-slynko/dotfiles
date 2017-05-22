@@ -25,6 +25,11 @@ set laststatus=2  " Always display the status line
 
 set tabpagemax=30 " Open 30 files using vim -p
 
+" Spaces win
+set tabstop=2
+set shiftwidth=2 " Tabs under smart indent
+set expandtab
+
 call plug#begin('~/.local/share/nvim/plugged')
 
 Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
