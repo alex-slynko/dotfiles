@@ -51,4 +51,11 @@ let g:go_fmt_fail_silently = 1
 let g:go_fmt_experimental = 1
 
 let g:deoplete#sources#go#align_class = 1
+"
+" save on enter
 nnoremap <unique> <expr> <CR> empty(&buftype) ? ':w<CR>' : '<CR>'
+
+set wildmode=list:longest " use emacs-style tab completion when selecting files, etc
+set wildmenu " show menu for files
+set path+=**
+set wildignore+=*/Godeps/*,vendor/*
