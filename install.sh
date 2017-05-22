@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/sh -e
 
 cutstring="DO NOT EDIT BELOW THIS LINE"
 
@@ -34,3 +34,21 @@ for name in *; do
   fi
 done
 
+# link vim
+function link_to() {
+  local original=$1
+  local target=$2
+  if [ -e "$target" ]; then
+
+    if [ ! -L "$target" ]; then
+      echo "Deleting $target and creating new link"
+      rm "$target"
+      ln -s "$original" "$target"
+    fi
+  else
+    echo "Linking $target"
+    ln -s "$original" "$target"
+  fi
+}
+link_to "/usr/local/bin/nvim" "/usr/local/bin/vim"
+link_to "/usr/local/bin/nvim" "/usr/local/bin/vi"
