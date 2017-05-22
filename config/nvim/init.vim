@@ -30,6 +30,8 @@ set tabstop=2
 set shiftwidth=2 " Tabs under smart indent
 set expandtab
 
+set autowrite     " write on running commands
+
 call plug#begin('~/.local/share/nvim/plugged')
 
 Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
