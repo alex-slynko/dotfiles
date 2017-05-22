@@ -41,3 +41,4 @@
     followRedirects = true
 [commit]
   verbose = true
+  template = ~/.gitmessage
