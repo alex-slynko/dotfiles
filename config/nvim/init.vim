@@ -31,6 +31,7 @@ set shiftwidth=2 " Tabs under smart indent
 set expandtab
 
 set autowrite     " write on running commands
+set backspace=indent,eol,start
 
 call plug#begin('~/.local/share/nvim/plugged')
 
@@ -59,3 +60,12 @@ set wildmode=list:longest " use emacs-style tab completion when selecting files,
 set wildmenu " show menu for files
 set path+=**
 set wildignore+=*/Godeps/*,vendor/*
+
+" Mouse {{{
+set mousehide  " Hide mouse after chars typed
+set mouse=a  " Mouse in all modes
+" }}}
+
+let g:netrw_banner=0 " hide netrw banner
+set spell " do spellchecks
+
