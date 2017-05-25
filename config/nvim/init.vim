@@ -5,7 +5,7 @@ filetype plugin indent on
 set showcmd " show current command
 
 " We need a new leader
-let mapleader = "\<Space>"
+let mapleader = " "
 
 set splitright
 set splitbelow
@@ -40,6 +40,7 @@ Plug 'fatih/vim-go', { 'tag': '*', 'do': ':GoInstallBinaries' }
 Plug 'janko-m/vim-test'
 Plug 'tpope/vim-surround'
 Plug 'tpope/vim-commentary'
+Plug 'tpope/vim-projectionist'
 call plug#end()
 
 autocmd FileType go compiler go
@@ -56,10 +57,10 @@ let g:deoplete#sources#go#align_class = 1
 " save on enter
 nnoremap <unique> <expr> <CR> empty(&buftype) ? ':w<CR>' : '<CR>'
 
-set wildmode=list:longest " use emacs-style tab completion when selecting files, etc
+" set wildmode=list:longest " use emacs-style tab completion when selecting files, etc
 set wildmenu " show menu for files
 set path+=**
-set wildignore+=*/Godeps/*,vendor/*
+set wildignore+=Godeps/*,vendor/*
 
 " Mouse {{{
 set mousehide  " Hide mouse after chars typed
@@ -69,3 +70,6 @@ set mouse=a  " Mouse in all modes
 let g:netrw_banner=0 " hide netrw banner
 set spell " do spellchecks
 
+colorscheme delek
+
+set relativenumber
