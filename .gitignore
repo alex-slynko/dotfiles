@@ -1,3 +1,6 @@
 .netrw*
 shada
 spell
+plugged
+rplugin.vim
+
