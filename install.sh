@@ -52,3 +52,5 @@ function link_to() {
 }
 link_to "/usr/local/bin/nvim" "/usr/local/bin/vim"
 link_to "/usr/local/bin/nvim" "/usr/local/bin/vi"
+gem install neovim
+pip3 install --upgrade neovim
