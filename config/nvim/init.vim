@@ -41,6 +41,7 @@ Plug 'janko-m/vim-test'
 Plug 'tpope/vim-surround'
 Plug 'tpope/vim-commentary'
 Plug 'tpope/vim-projectionist'
+Plug 'NewProggie/NewProggie-Color-Scheme'
 call plug#end()
 
 autocmd FileType go compiler go
@@ -70,6 +71,6 @@ set mouse=a  " Mouse in all modes
 let g:netrw_banner=0 " hide netrw banner
 set spell " do spellchecks
 
-colorscheme delek
+colorscheme newproggie
 
 set relativenumber
