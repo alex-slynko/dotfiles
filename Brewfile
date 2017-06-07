@@ -15,6 +15,8 @@ brew 'cloudfoundry/tap/cf-cli'
 brew 'git-duet/tap/git-duet'
 brew 'neovim/neovim/neovim'
 brew 'kubectl'
+brew 'bash-completion'
+brew 'ruby'
 brew 'universal-ctags/universal-ctags/universal-ctags', args: ['HEAD']
 cask 'flycut'
 cask 'iterm2'
