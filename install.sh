@@ -52,5 +52,8 @@ function link_to() {
 }
 link_to "/usr/local/bin/nvim" "/usr/local/bin/vim"
 link_to "/usr/local/bin/nvim" "/usr/local/bin/vi"
+brew bundle
 gem install neovim
 pip3 install --upgrade neovim
+
+curl -L https://iterm2.com/misc/install_shell_integration.sh | bash
