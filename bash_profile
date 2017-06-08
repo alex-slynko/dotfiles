@@ -11,3 +11,8 @@ export CLICOLOR=1
 export PATH=$PATH:"${HOME}/go/bin"
 
 test -e "${HOME}/.iterm2_shell_integration.bash" && source "${HOME}/.iterm2_shell_integration.bash"
+if brew -h > /dev/null; then
+  if [ -f $(brew --prefix)/etc/bash_completion ]; then
+  . $(brew --prefix)/etc/bash_completion
+  fi
+fi
