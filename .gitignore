@@ -1,4 +1,5 @@
 .netrw*
+nvim/view
 shada
 spell
 plugged
