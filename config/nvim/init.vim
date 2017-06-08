@@ -73,4 +73,5 @@ set spell " do spellchecks
 
 colorscheme newproggie
 
+let g:loaded_python_provider = 1 " disable python
 set relativenumber
