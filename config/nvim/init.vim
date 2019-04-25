@@ -41,7 +41,7 @@ Plug 'janko-m/vim-test'
 Plug 'tpope/vim-surround'
 Plug 'tpope/vim-commentary'
 Plug 'tpope/vim-projectionist'
-Plug 'NewProggie/NewProggie-Color-Scheme'
+Plug 'tomasr/molokai'
 call plug#end()
 
 autocmd FileType go compiler go
@@ -69,9 +69,10 @@ set mouse=a  " Mouse in all modes
 " }}}
 
 let g:netrw_banner=0 " hide netrw banner
-set spell " do spellchecks
+autocmd FileType gitcommit setlocal spell
+autocmd FileType markdown setlocal spell
+autocmd BufNewFile,BufRead *.gitconfig-shared gitconfig
 
-colorscheme newproggie
-
+colorscheme molokai
+let g:rehash256 = 1
 let g:loaded_python_provider = 1 " disable python
-set relativenumber
