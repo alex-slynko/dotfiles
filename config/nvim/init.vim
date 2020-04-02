@@ -1,4 +1,5 @@
 syntax enable
+runtime macros/matchit.vim
 filetype on
 filetype plugin indent on
 

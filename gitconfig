@@ -6,7 +6,6 @@
 [apply]
   whitespace = nowarn
 [core]
-    pager = /usr/local/opt/git/share/git-core/contrib/diff-highlight/diff-highlight | less
     editor = /usr/local/bin/nvim
 [push]
   default = current
@@ -44,5 +43,6 @@
   template = ~/.gitmessage
 [url "git@bitbucket.org:"]
 	insteadOf = https://bitbucket.org/
-[url "git@github.com:"]
-	insteadOf = https://github.com/
+[user]
+	email = slynko@outlook.com
+	name = Oleksandr Slynko
