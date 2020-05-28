@@ -36,6 +36,7 @@ set backspace=indent,eol,start
 
 call plug#begin('~/.local/share/nvim/plugged')
 
+Plug 'dense-analysis/ale'
 Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
 Plug 'fatih/vim-go', { 'tag': '*', 'do': ':GoInstallBinaries' }
 Plug 'janko-m/vim-test'
@@ -43,16 +44,14 @@ Plug 'tpope/vim-surround'
 Plug 'tpope/vim-commentary'
 Plug 'tpope/vim-projectionist'
 Plug 'tomasr/molokai'
+Plug 'martinda/Jenkinsfile-vim-syntax'
+Plug 'ionide/Ionide-vim', {
+      \ 'do':  'make fsautocomplete',
+      \}
 call plug#end()
 
 autocmd FileType go compiler go
 autocmd! BufEnter *.go setlocal shiftwidth=2 tabstop=2 softtabstop=2 noexpandtab
-
-" vim-go setup
-let g:go_fmt_autosave = 1
-let g:go_fmt_command = "goimports"
-let g:go_fmt_fail_silently = 1
-let g:go_fmt_experimental = 1
 
 let g:deoplete#sources#go#align_class = 1
 "
@@ -74,6 +73,7 @@ autocmd FileType gitcommit setlocal spell
 autocmd FileType markdown setlocal spell
 autocmd BufNewFile,BufRead *.gitconfig-shared gitconfig
 
-colorscheme molokai
 let g:rehash256 = 1
 let g:loaded_python_provider = 1 " disable python
+nmap <silent> <C-k> <Plug>(ale_previous_wrap)
+nmap <silent> <C-j> <Plug>(ale_next_wrap)
