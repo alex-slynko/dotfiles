@@ -2,11 +2,13 @@
   cleanup = !git checkout master && git pull && git branch  --merged  master | grep -v 'master$' | xargs  git  branch  -d
   unstage = reset HEAD
   st = status
+  ci = commit
 
 [apply]
   whitespace = nowarn
 [core]
     editor = /usr/local/bin/nvim
+	pager = true
 [push]
   default = current
 [color "status"]
