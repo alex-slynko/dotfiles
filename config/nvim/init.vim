@@ -41,6 +41,7 @@ Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
 Plug 'fatih/vim-go', { 'tag': '*', 'do': ':GoInstallBinaries' }
 Plug 'janko-m/vim-test'
 Plug 'tpope/vim-surround'
+Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-commentary'
 Plug 'tpope/vim-projectionist'
 Plug 'tomasr/molokai'
@@ -52,6 +53,7 @@ call plug#end()
 
 autocmd FileType go compiler go
 autocmd! BufEnter *.go setlocal shiftwidth=2 tabstop=2 softtabstop=2 noexpandtab
+autocmd Filetype groovy setlocal tabstop=4
 
 let g:deoplete#sources#go#align_class = 1
 "
