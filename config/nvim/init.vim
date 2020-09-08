@@ -51,8 +51,6 @@ Plug 'ionide/Ionide-vim', {
       \}
 call plug#end()
 
-autocmd FileType go compiler go
-autocmd! BufEnter *.go setlocal shiftwidth=2 tabstop=2 softtabstop=2 noexpandtab
 autocmd Filetype groovy setlocal tabstop=4
 
 let g:deoplete#sources#go#align_class = 1
