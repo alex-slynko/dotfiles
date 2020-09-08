@@ -29,8 +29,6 @@ let g:ale_go_langserver_executable = 'gopls'
 
 let g:ale_linters = {
 \   'go': ['golangci-lint', 'gopls'],
-\   'typescript': ['tsserver', 'typecheck'],
-\   'javascript': ['eslint'],
 \}
 
 " This gets around typecheck errors for types defined in other files in the
@@ -52,3 +50,6 @@ let g:projectionist_heuristics = {
             \       'type': 'test'
             \   },
             \ }}
+
+autocmd FileType go compiler go
+autocmd! BufEnter *.go setlocal shiftwidth=2 tabstop=2 softtabstop=2 noexpandtab
