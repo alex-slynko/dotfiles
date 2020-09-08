@@ -67,12 +67,11 @@ issues:
       linters:
       - scopelint
       text: "testcase"
-
   # Maximum issues count per one linter. Set to 0 to disable.
   max-per-linter: 0
 
   # Maximum count of issues with the same text. Set to 0 to disable
-  max-same-issues: 0
+  max-same: 0
 
   # Show only new issues
   new: false
