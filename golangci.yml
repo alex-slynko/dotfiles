@@ -1,0 +1,50 @@
+run:
+  # which dirs to skip: they won't be analyzed;
+  skip-dirs:
+    - vendor
+
+linters-settings:
+  govet:
+    # report about shadowed variables
+    check-shadowing: true
+  gocyclo:
+    # minimal code complexity to report
+    min-complexity: 10
+  maligned:
+    # print struct with more effective memory layout
+    suggest-new: true
+  lll:
+    line-length: 512
+
+linters:
+  enable-all: true
+  disable:
+    # gofumpt also includes gofumports. These are a stricter version of gofmt
+    # and goimports respectively. By enabling them we also wanted to include
+    # them in our vim configurations to be run on save. Unfortunately this
+    # makes vim.coc report errors very slowly, or not at all. If we decide to
+    # enable them back we should also make sure that they work in our vim configs.
+    - gofumpt
+    # whitespaces are not that important
+    - wsl
+
+issues:
+  exclude-use-default: true
+  exclude-rules:
+    - path: _test\.go
+      linters:
+      - goconst
+      - dupl
+      - gomnd
+      - gochecknoglobals
+    - linters:
+      - goerr113
+      text: "do not define dynamic errors"
+  # Maximum issues count per one linter. Set to 0 to disable.
+  max-per-linter: 0
+
+  # Maximum count of issues with the same text. Set to 0 to disable
+  max-same: 0
+
+  # Show only new issues
+  new: false
