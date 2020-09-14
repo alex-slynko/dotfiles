@@ -40,6 +40,12 @@ issues:
     - linters:
       - goerr113
       text: "do not define dynamic errors"
+      # scopelint has false positives for table tests https://github.com/kyoh86/scopelint/issues/4
+    - path: _test.go
+      linters:
+      - scopelint
+      text: "testcase"
+
   # Maximum issues count per one linter. Set to 0 to disable.
   max-per-linter: 0
 
