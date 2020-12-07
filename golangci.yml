@@ -1,5 +1,6 @@
 run:
   # which dirs to skip: they won't be analyzed;
+  timeout: 20m
   skip-dirs:
     - vendor
 
@@ -37,10 +38,15 @@ issues:
       - dupl
       - gomnd
       - gochecknoglobals
+      - exhaustivestruct
     - linters:
       - goerr113
       text: "do not define dynamic errors"
       # scopelint has false positives for table tests https://github.com/kyoh86/scopelint/issues/4
+    - path: _test.go
+      linters:
+      - scopelint
+      text: "tc"
     - path: _test.go
       linters:
       - scopelint
