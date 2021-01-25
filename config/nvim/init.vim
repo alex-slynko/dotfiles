@@ -54,6 +54,12 @@ call plug#end()
 autocmd Filetype groovy setlocal tabstop=4
 
 let g:deoplete#sources#go#align_class = 1
+let g:ale_fixers = {
+\   '*': ['remove_trailing_lines', 'trim_whitespace'],
+\   'yaml':  ['prettier', 'yamlfix'],
+\   'ruby': ['rubocop', 'rufo', 'standardrb' ],
+\   'sh': ['shfmt']
+\ }
 "
 " save on enter
 nnoremap <unique> <expr> <CR> empty(&buftype) ? ':w<CR>' : '<CR>'

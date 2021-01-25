@@ -55,5 +55,7 @@ link_to "/usr/local/bin/nvim" "/usr/local/bin/vi"
 
 brew -h > /dev/null || /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 brew bundle
-gem install neovim
-pip3 install --upgrade neovim
+gem install neovim brakeman debride reek rubocop solargraph sorbet standardrb
+pip3 install --upgrade neovim yamlfix spectral yamllint
+npm install swaglint neovim ruamel.yaml
+go get github.com/mrtazz/checkmake/tree/master/cmd/checkmake
