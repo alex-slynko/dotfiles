@@ -46,9 +46,11 @@ Plug 'tpope/vim-commentary'
 Plug 'tpope/vim-projectionist'
 Plug 'tomasr/molokai'
 Plug 'martinda/Jenkinsfile-vim-syntax'
+Plug 'editorconfig/editorconfig-vim'
 Plug 'ionide/Ionide-vim', {
       \ 'do':  'make fsautocomplete',
       \}
+Plug 'hashivim/vim-terraform'
 call plug#end()
 
 autocmd Filetype groovy setlocal tabstop=4

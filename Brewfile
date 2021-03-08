@@ -9,6 +9,7 @@ tap "instrumenta/instrumenta"
 tap "k14s/tap"
 tap "neovim/neovim"
 tap "universal-ctags/universal-ctags"
+tap 'hashicorp/tap'
 brew "automake"
 brew "gdbm"
 brew "openssl@1.1"
@@ -18,6 +19,7 @@ brew "bash-completion"
 brew "bison"
 brew "libffi"
 brew "chruby"
+brew 'cfn-lint'
 brew "go"
 brew "dep"
 brew "dhall"
@@ -42,9 +44,13 @@ brew "ruby-install"
 brew "shellcheck"
 brew "shfmt"
 brew "stow"
+brew 'tflint'
+brew 'terraform'
+brew 'hashicorp/tap/terraform-ls'
 brew "the_silver_searcher"
 brew "tig"
 brew "tmux"
+brew 'vale'
 brew "wget"
 brew "getantibody/tap/antibody"
 brew "git-duet/tap/git-duet"
