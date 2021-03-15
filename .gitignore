@@ -10,5 +10,9 @@ local/share/nvim/log
 local/share/nvim/view
 config/configstore
 config/gcloud
-Brewfile.lock.json
+config/htop
+config/iterm2
 config/nvim/autoload/plug.vim.old
+Brewfile.lock.json
+Brewfile.tmp
+node_modules
