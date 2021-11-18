@@ -1,3 +1,4 @@
+package*.json
 .netrw*
 nvim/view
 shada
@@ -8,6 +9,8 @@ local/bin
 local/share/NuGet
 local/share/nvim/log
 local/share/nvim/view
+local/pipx/
+local/share/direnv/
 config/configstore
 config/gcloud
 config/htop
