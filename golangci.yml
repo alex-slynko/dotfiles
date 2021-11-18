@@ -67,6 +67,15 @@ issues:
       linters:
       - scopelint
       text: "testcase"
+    - linters:
+      - exhaustivestruct
+      text: 'k8s'
+    - linters:
+      - exhaustivestruct
+      text: 'metav1'
+    - linters:
+      - exhaustivestruct
+      text: 'Pod'
   # Maximum issues count per one linter. Set to 0 to disable.
   max-per-linter: 0
 

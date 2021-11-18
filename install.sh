@@ -57,6 +57,7 @@ brew -h > /dev/null || /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercont
 brew bundle
 brew upgrade
 gem install neovim brakeman debride reek rubocop solargraph sorbet standardrb ruumba mdl
+go install github.com/mrtazz/checkmake/cmd/checkmake@latest
+go install github.com/onsi/ginkgo/ginkgo@latest
 pip3 install --upgrade neovim yamlfix spectral yamllint gitlint
 npm install swaglint neovim bash-language-server fixjson @stoplight/spectral alex markdownlint
-go get github.com/mrtazz/checkmake
