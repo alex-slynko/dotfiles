@@ -58,6 +58,6 @@ brew bundle
 brew upgrade
 gem install neovim brakeman debride reek rubocop solargraph sorbet standardrb ruumba mdl
 go install github.com/mrtazz/checkmake/cmd/checkmake@latest
-go install github.com/onsi/ginkgo/ginkgo@latest
+go install github.com/onsi/ginkgo/v2/ginkgo@latest
 pip3 install --upgrade neovim yamlfix spectral yamllint gitlint
 npm install swaglint neovim bash-language-server fixjson @stoplight/spectral alex markdownlint
