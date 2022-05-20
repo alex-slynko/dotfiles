@@ -46,5 +46,7 @@
 [url "git@bitbucket.org:"]
 	insteadOf = https://bitbucket.org/
 [user]
-	email = slynko@outlook.com
+	email = alex-slynko@github.com
 	name = Oleksandr Slynko
+[gpg]
+	program = gpg
