@@ -8,7 +8,6 @@ export RUBYOPT="--jit"
 export LOLCOMMITS_FORK=true
 export LOLCOMMITS_STEALH=true
 
-alias vim='vim -p "$@"'
 autoload -U up-line-or-beginning-search
 autoload -U down-line-or-beginning-search
 autoload -U edit-command-line
@@ -52,3 +51,4 @@ autoload -U edit-command-line
 zle -N edit-command-line
 bindkey '^xe' edit-command-line
 bindkey '^x^e' edit-command-line
+export PATH="/opt/homebrew/opt/ruby/bin:$PATH"
