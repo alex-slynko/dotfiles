@@ -52,3 +52,5 @@ zle -N edit-command-line
 bindkey '^xe' edit-command-line
 bindkey '^x^e' edit-command-line
 export PATH="/opt/homebrew/opt/ruby/bin:$PATH"
+source <(conftest completion zsh)
+source <(kubectl completion zsh)
