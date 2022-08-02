@@ -50,13 +50,11 @@ function link_to() {
     ln -s "$original" "$target"
   fi
 }
-link_to "/usr/local/bin/nvim" "/usr/local/bin/vim"
-link_to "/usr/local/bin/nvim" "/usr/local/bin/vi"
 
 brew -h > /dev/null || /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 brew bundle
 brew upgrade
-gem install neovim brakeman debride reek rubocop solargraph sorbet standardrb ruumba mdl
+gem install neovim brakeman debride reek rubocop solargraph standardrb ruumba mdl
 go install github.com/mrtazz/checkmake/cmd/checkmake@latest
 go install github.com/onsi/ginkgo/v2/ginkgo@latest
 pip3 install --upgrade neovim yamlfix spectral yamllint gitlint
