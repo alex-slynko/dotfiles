@@ -47,7 +47,8 @@ Plug 'tpope/vim-projectionist'
 Plug 'tomasr/molokai'
 Plug 'editorconfig/editorconfig-vim'
 Plug 'hashivim/vim-terraform'
-Plug 'hashivim/vim-terraform'
+Plug 'HiPhish/jinja.vim'
+Plug 'https://gitlab.com/HiPhish/desktop-notify.nvim'
 call plug#end()
 
 autocmd Filetype groovy setlocal tabstop=4
