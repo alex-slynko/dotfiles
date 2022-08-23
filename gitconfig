@@ -52,3 +52,5 @@
 	name = Oleksandr Slynko
 [gpg]
 	program = gpg
+[init]
+	defaultBranch = main
