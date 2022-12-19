@@ -1,5 +1,5 @@
 # Customize to your needs...
-export PATH="/usr/local/opt/ruby/bin:$PATH:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/local/sbin:$HOME/.local/bin:$HOME/go/bin"
+export PATH="/opt/homebrew/opt/ruby/bin:/usr/local/opt/ruby/bin:$PATH:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/local/sbin:$HOME/.local/bin:$HOME/go/bin"
 
 export EDITOR=nvim
 export VISUAL=nvim
@@ -51,10 +51,13 @@ autoload -U edit-command-line
 zle -N edit-command-line
 bindkey '^xe' edit-command-line
 bindkey '^x^e' edit-command-line
-export PATH="/opt/homebrew/opt/ruby/bin:$PATH"
 source <(conftest completion zsh)
 source <(kubectl completion zsh)
 
 export PYENV_ROOT="$HOME/.pyenv"
 command -v pyenv >/dev/null || export PATH="$PYENV_ROOT/bin:$PATH"
 eval "$(pyenv init -)"
+export PATH="$PATH:$HOME/.dotnet/tools"
+
+autoload -U +X bashcompinit && bashcompinit
+complete -o nospace -C /opt/homebrew/bin/terraform terraform

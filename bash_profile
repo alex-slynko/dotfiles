@@ -16,3 +16,5 @@ if brew -h > /dev/null; then
   . $(brew --prefix)/etc/bash_completion
   fi
 fi
+
+complete -C /opt/homebrew/bin/terraform terraform
