@@ -53,6 +53,8 @@ Plug 'hashivim/vim-terraform'
 Plug 'HiPhish/jinja.vim'
 Plug 'noahfrederick/vim-jekyll'
 Plug 'https://gitlab.com/HiPhish/desktop-notify.nvim'
+Plug 'numirias/semshi'
+Plug 'Vimjas/vim-python-pep8-indent'
 call plug#end()
 
 autocmd Filetype groovy setlocal tabstop=4
@@ -62,9 +64,14 @@ let g:ale_fixers = {
 \   '*': ['remove_trailing_lines', 'trim_whitespace'],
 \   'yaml':  ['prettier', 'yamlfix'],
 \   'ruby': ['rubocop', 'rufo', 'standardrb' ],
-\   'sh': ['shfmt']
+\   'sh': ['shfmt'],
+\   'python': ['cspell', 'flake8', 'flakehell', 'jedils', 'mypy', 'prospector', 'pycln', 'pycodestyle', 'pydocstyle', 'pyflakes', 'pylama', 'pylint', 'pylsp' , 'pyre', 'pyright', 'refurb', 'ruff', 'unimport', 'vulture'],
 \ }
-"
+let g:ale_linters = {
+\   'yaml': ['yamllint'],
+\   'python': ['flake8', 'flakehell', 'mypy', 'pylint', 'pyright', 'pyre', 'pylsp', 'pycodestyle', 'pydocstyle', 'pyflakes', 'pylama', 'pylint', 'pylsp', 'pyre', 'pyright', 'refurb', 'ruff', 'unimport', 'vulture'],
+\ }
+
 " save on enter
 nnoremap <unique> <expr> <CR> empty(&buftype) ? ':w<CR>' : '<CR>'
 
