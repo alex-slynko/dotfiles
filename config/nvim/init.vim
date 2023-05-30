@@ -65,11 +65,11 @@ let g:ale_fixers = {
 \   'yaml':  ['prettier', 'yamlfix'],
 \   'ruby': ['rubocop', 'rufo', 'standardrb' ],
 \   'sh': ['shfmt'],
-\   'python': ['cspell', 'flake8', 'flakehell', 'jedils', 'mypy', 'prospector', 'pycln', 'pycodestyle', 'pydocstyle', 'pyflakes', 'pylama', 'pylint', 'pylsp' , 'pyre', 'pyright', 'refurb', 'ruff', 'unimport', 'vulture'],
+\   'python': [ 'black', 'add_blank_lines_for_python_control_statements', 'autopep8', 'isort', 'yapf', 'pycln', 'pyflyby', 'ruff', 'reorder-python-imports' ],
 \ }
 let g:ale_linters = {
 \   'yaml': ['yamllint'],
-\   'python': ['flake8', 'flakehell', 'mypy', 'pylint', 'pyright', 'pyre', 'pylsp', 'pycodestyle', 'pydocstyle', 'pyflakes', 'pylama', 'pylint', 'pylsp', 'pyre', 'pyright', 'refurb', 'ruff', 'unimport', 'vulture'],
+\   'python': ['flake8', 'flakehell', 'mypy', 'pylint', 'pyright', 'pyre', 'pylsp', 'pydocstyle', 'pyflakes', 'pylama', 'pylint', 'pylsp', 'pyre', 'pyright', 'refurb', 'ruff', 'unimport', 'vulture'],
 \ }
 
 " save on enter
