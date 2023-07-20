@@ -1,5 +1,5 @@
 # Customize to your needs...
-export PATH="/opt/homebrew/opt/ruby/bin:/usr/local/opt/ruby/bin:$PATH:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/local/sbin:$HOME/.local/bin:$HOME/go/bin"
+export PATH="/opt/homebrew/opt/ruby/bin:/usr/local/opt/ruby/bin:$PATH:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/local/sbin:$HOME/.local/bin:$HOME/go/bin:/opt/homebrew/opt/dotnet@6/bin"
 
 export EDITOR=nvim
 export VISUAL=nvim

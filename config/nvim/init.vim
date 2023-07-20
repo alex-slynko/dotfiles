@@ -36,6 +36,7 @@ set backspace=indent,eol,start
 
 call plug#begin('~/.local/share/nvim/plugged')
 
+Plug 'neovim/nvim-lspconfig', { 'do': ':UpdateRemotePlugins' }
 Plug 'dense-analysis/ale'
 Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
 Plug 'fatih/vim-go', { 'tag': '*', 'do': ':GoInstallBinaries' }
