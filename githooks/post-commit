@@ -1,0 +1,10 @@
+#!/usr/bin/env bash
+
+root_dir="$(git rev-parse --show-toplevel)"
+
+dirname=$(basename "$root_dir")
+head -1 "$root_dir/.git/COMMIT_EDITMSG"
+
+mkdir -p "$HOME/memory/$dirname"
+imagesnap -q -w 3 "$HOME/memory/$dirname/$(date +%s)_$(git rev-parse HEAD).jpg"
+

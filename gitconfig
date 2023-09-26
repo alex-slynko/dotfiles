@@ -9,6 +9,7 @@
   whitespace = nowarn
 [core]
   editor = /usr/local/bin/nvim
+  hooksPath = ~/.githooks
 [push]
   default = current
 [color "status"]
