@@ -3,7 +3,7 @@
 root_dir="$(git rev-parse --show-toplevel)"
 
 dirname=$(basename "$root_dir")
-message=$(head -1 "$root_dir/.git/COMMIT_EDITMSG")
+message="$(date -I) $(head -1 "$root_dir/.git/COMMIT_EDITMSG")"
 
 mkdir -p "$HOME/memory/$dirname"
 
