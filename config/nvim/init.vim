@@ -56,6 +56,7 @@ Plug 'noahfrederick/vim-jekyll'
 Plug 'https://gitlab.com/HiPhish/desktop-notify.nvim'
 Plug 'numirias/semshi'
 Plug 'Vimjas/vim-python-pep8-indent'
+Plug 'yasuhiroki/github-actions-yaml.vim'
 call plug#end()
 
 autocmd Filetype groovy setlocal tabstop=4
