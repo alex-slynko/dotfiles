@@ -1,0 +1,107 @@
+select = ["ALL"]
+ignore = ["COM812", "COM819", "C901", "ANN", "DTZ", "TD", "D", "S101", "F405", "PD901", 
+"PLC1901", "PLR0911", "PLR2004", "PLR0913", "FBT002", "G001", "G002", "G004"]
+
+# Disable some Pyflakes codes:
+   # D pydocstyle
+   # COM812 - comma at the end of the line
+   # COM819 - trailing comma prohibited
+   # Q000 - Remove bad quotes
+   # C901 - McCabe complexity
+   # S101 - Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   # F405 - Name may be undefined, or defined from star imports: module
+   # PD901 - df is perfect name for dataframe
+   # PLC1901 - Python falsey empty string and None are confusing, so let's not simplify this too much
+   # PLR0911 - While too many return statements is a code smell, it's not a hard rule
+   # PLR2004 - Magic numbers should be fixed on a case-by-case basis
+   # PLR0913 - Allow too many arguments, since I don't want 
+   # FBT002 - default boolean values are fine
+   # G001 - Logging statement uses string formatting
+   # G002 - Logging statement uses string concatenation
+   # G004 - Logging uses f-string
+
+
+# Tempporarily disable some codes:
+ # ANN flake8-annotations
+ # DTZ flake8-datetimez
+ # TD flake8-todos
+
+   # F Pyflakes
+ # E/W pycodestyle
+ # C90 mccabe
+   # I isort
+   # N pep8-naming
+  # UP pyupgrade
+ # YTT flake8-2020
+# ASYNC flake8-async
+   # S flake8-bandit
+ # BLE flake8-blind-except
+ # FBT flake8-boolean-trap
+   # B flake8-bugbear
+   # A flake8-builtins
+ # COM flake8-commas
+  # C4 flake8-comprehensions
+ # T10 flake8-debugger
+  # DJ flake8-django
+  # EM flake8-errmsg
+ # EXE flake8-executable
+  # FA flake8-future-annotations
+ # ISC flake8-implicit-str-concat
+ # ICN flake8-import-conventions
+   # G flake8-logging-format
+ # INP flake8-no-pep420
+ # PIE flake8-pie
+ # T20 flake8-print
+ # PYI flake8-pyi
+  # PT flake8-pytest-style
+   # Q flake8-quotes
+ # RSE flake8-raise
+ # RET flake8-return
+ # SLF flake8-self
+ # SIM flake8-simplify
+ # TID flake8-tidy-imports
+ # TCH flake8-type-checking
+ # INT flake8-gettext
+ # ARG flake8-unused-arguments
+ # PTH flake8-use-pathlib
+  # TD flake8-todos
+ # ERA eradicate
+  # PD pandas-vet
+ # PGH pygrep-hooks
+  # PL Pylint
+ # TRY tryceratops
+ # FLY flynt
+ # NPY NumPy-specific rules
+ # RUF Ruff-specific rules
+# Allow autofix for all enabled rules (when `--fix`) is provided.
+fixable = ["A", "B", "C", "D", "E", "F", "G", "I", "N", "Q", "S", "T", "W", "ANN", "ARG", "BLE", "COM", "DJ", "DTZ", "EM", "ERA", "EXE", "FBT", "ICN", "INP", "ISC", "NPY", "PD", "PGH", "PIE", "PL", "PT", "PTH", "PYI", "RET", "RSE", "RUF", "SIM", "SLF", "TCH", "TID", "TRY", "UP", "YTT"]
+unfixable = []
+
+# Exclude a variety of commonly ignored directories.
+exclude = [
+    ".bzr",
+    ".direnv",
+    ".eggs",
+    ".git",
+    ".git-rewrite",
+    ".hg",
+    ".mypy_cache",
+    ".nox",
+    ".pants.d",
+    ".pytype",
+    ".ruff_cache",
+    ".svn",
+    ".tox",
+    ".venv",
+    "__pypackages__",
+    "_build",
+    "buck-out",
+    "build",
+    "dist",
+    "node_modules",
+    "venv",
+    "docs"
+]
+
+line-length = 120
+
