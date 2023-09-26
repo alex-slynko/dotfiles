@@ -1,6 +1,8 @@
 #!/usr/bin/env bash
 
-printenv 
-echo $@
+root_dir="$(git rev-parse --show-toplevel)"
+
+dirname=$(basename "$root_dir")
+ls "$root_dir/.git"
 
 exit 1
