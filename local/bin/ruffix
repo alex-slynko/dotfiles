@@ -1,0 +1,2 @@
+#!/usr/bin/env bash
+ruff --preview --select I001,F401,E225 --fix "$1"
