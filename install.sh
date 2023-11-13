@@ -1,4 +1,5 @@
-#!/bin/bash -e
+#!/usr/bin/env bash
+set -eu -o pipefail
 
 cutstring="DO NOT EDIT BELOW THIS LINE"
 
@@ -54,8 +55,19 @@ function link_to() {
 brew -h > /dev/null || /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 brew bundle
 brew upgrade
+pypy_version=$(pyenv install --list | grep -vE '(^Available versions:|-src|dev|rc|alpha|beta|(a|b)[0-9]+)' | grep 'pypy' | tail -1 | tr -d '[:space:]')
+echo "Installing pypy $pypy_version"
+pyenv install "$pypy_version"
+pyenv global "$pypy_version"
 gem install neovim brakeman debride reek rubocop solargraph standardrb ruumba mdl
 go install github.com/mrtazz/checkmake/cmd/checkmake@latest
 go install github.com/onsi/ginkgo/v2/ginkgo@latest
-pip3 install --upgrade neovim yamlfix spectral yamllint gitlint
+nvim +PlugUpgrade +PlugUpdate +qa --headless
+for version in $(pyenv versions --bare); do
+  pyenv local "$version"
+  echo "Installing python packages for $version"
+  pip install --upgrade pip --quiet
+  pip install --upgrade neovim yamlfix spectral yamllint gitlint ruff --quiet
+done
+
 npm install -g swaglint neovim bash-language-server fixjson @stoplight/spectral alex markdownlint @githubnext/github-copilot-cli
