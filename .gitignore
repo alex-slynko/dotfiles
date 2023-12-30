@@ -1,7 +1,9 @@
 .DS_Store
 .netrw*
+.python-version
 Brewfile.lock.json
 Brewfile.tmp
+config/Microsoft\\VisualStudio Services/
 config/NuGet
 config/configstore
 config/gcloud
@@ -11,15 +13,16 @@ config/htop
 config/iterm2
 config/nvim/autoload/plug.vim.old
 config/xbuild/
-config/Microsoft\\VisualStudio Services/
 local/bin
 local/pipx/
 local/share/Microsoft
 local/share/NuGet
 local/share/azure-functions-core-tools/
 local/share/direnv/
+local/share/gh/extensions
 local/share/nvim/log
 local/share/nvim/view
+local/share/sheldon/repos/
 local/state
 node_modules
 nvim/view

@@ -67,7 +67,8 @@ for version in $(pyenv versions --bare); do
   pyenv local "$version"
   echo "Installing python packages for $version"
   pip install --upgrade pip --quiet
-  pip install --upgrade neovim yamlfix spectral yamllint gitlint ruff --quiet
+  pip install --upgrade pynvim neovim yamlfix spectral yamllint gitlint ruff --quiet
 done
 
 npm install -g swaglint neovim bash-language-server fixjson @stoplight/spectral alex markdownlint @githubnext/github-copilot-cli
+sheldon lock --update

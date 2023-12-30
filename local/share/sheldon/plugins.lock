@@ -1,0 +1,77 @@
+version = "0.7.4"
+home = "/Users/oleksandr.slynko"
+config_dir = "/Users/oleksandr.slynko/.config/sheldon"
+data_dir = "/Users/oleksandr.slynko/.local/share/sheldon"
+config_file = "/Users/oleksandr.slynko/.config/sheldon/plugins.toml"
+
+[[plugins]]
+name = "fzf"
+source_dir = "/Users/oleksandr.slynko/.local/share/sheldon/repos/github.com/wookayin/fzf-fasd"
+files = ["/Users/oleksandr.slynko/.local/share/sheldon/repos/github.com/wookayin/fzf-fasd/fzf-fasd.plugin.zsh"]
+apply = ["source"]
+
+[plugins.hooks]
+
+[[plugins]]
+name = "z"
+source_dir = "/Users/oleksandr.slynko/.local/share/sheldon/repos/github.com/rupa/z"
+files = ["/Users/oleksandr.slynko/.local/share/sheldon/repos/github.com/rupa/z/z.sh"]
+apply = ["source"]
+
+[plugins.hooks]
+
+[[plugins]]
+name = "zsh-async"
+source_dir = "/Users/oleksandr.slynko/.local/share/sheldon/repos/github.com/mafredri/zsh-async"
+files = ["/Users/oleksandr.slynko/.local/share/sheldon/repos/github.com/mafredri/zsh-async/async.plugin.zsh"]
+apply = ["source"]
+
+[plugins.hooks]
+
+[[plugins]]
+name = "zsh-autosuggestions"
+source_dir = "/Users/oleksandr.slynko/.local/share/sheldon/repos/github.com/zsh-users/zsh-autosuggestions"
+files = ["/Users/oleksandr.slynko/.local/share/sheldon/repos/github.com/zsh-users/zsh-autosuggestions/zsh-autosuggestions.plugin.zsh"]
+apply = ["source"]
+
+[plugins.hooks]
+
+[[plugins]]
+name = "zsh-completions"
+source_dir = "/Users/oleksandr.slynko/.local/share/sheldon/repos/github.com/zsh-users/zsh-completions"
+files = ["/Users/oleksandr.slynko/.local/share/sheldon/repos/github.com/zsh-users/zsh-completions/zsh-completions.plugin.zsh"]
+apply = ["source"]
+
+[plugins.hooks]
+
+[[plugins]]
+name = "zsh-history-substring-search"
+source_dir = "/Users/oleksandr.slynko/.local/share/sheldon/repos/github.com/zsh-users/zsh-history-substring-search"
+files = ["/Users/oleksandr.slynko/.local/share/sheldon/repos/github.com/zsh-users/zsh-history-substring-search/zsh-history-substring-search.plugin.zsh"]
+apply = ["source"]
+
+[plugins.hooks]
+
+[[plugins]]
+name = "pure"
+source_dir = "/Users/oleksandr.slynko/.local/share/sheldon/repos/github.com/sindresorhus/pure"
+files = ["/Users/oleksandr.slynko/.local/share/sheldon/repos/github.com/sindresorhus/pure/pure.plugin.zsh"]
+apply = ["source"]
+
+[plugins.hooks]
+
+[[plugins]]
+name = "fast-syntax-highlighting"
+source_dir = "/Users/oleksandr.slynko/.local/share/sheldon/repos/github.com/zdharma/fast-syntax-highlighting"
+files = ["/Users/oleksandr.slynko/.local/share/sheldon/repos/github.com/zdharma/fast-syntax-highlighting/F-Sy-H.plugin.zsh"]
+apply = ["source"]
+
+[plugins.hooks]
+
+[templates]
+PATH = "export PATH=\"{{ dir }}:$PATH\""
+path = "path=( \"{{ dir }}\" $path )"
+fpath = "fpath=( \"{{ dir }}\" $fpath )"
+source = """
+{{ hooks?.pre | nl }}{% for file in files %}source \"{{ file }}\"
+{% endfor %}{{ hooks?.post | nl }}"""
