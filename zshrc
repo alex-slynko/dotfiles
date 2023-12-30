@@ -18,9 +18,8 @@ bindkey '^[[1~' beginning-of-line
 bindkey '^[[4~' end-of-line
 bindkey '^[[3~' delete-char
 
-source <(antibody init)
+eval "$(sheldon source)"
 autoload -Uz compinstall colors
-antibody bundle < $HOME/workspace/dotfiles/zshplugins.txt
 
 zstyle ':completion:*' completer _expand _complete _ignored _correct _approximate
 zstyle ':completion:*' expand prefix suffix
