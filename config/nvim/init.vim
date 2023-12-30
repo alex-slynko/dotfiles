@@ -54,7 +54,7 @@ Plug 'hashivim/vim-terraform'
 Plug 'HiPhish/jinja.vim'
 Plug 'noahfrederick/vim-jekyll'
 Plug 'https://gitlab.com/HiPhish/desktop-notify.nvim'
-Plug 'numirias/semshi'
+Plug 'numirias/semshi', { 'do': 'UpdateRemotePlugins' }
 Plug 'Vimjas/vim-python-pep8-indent'
 Plug 'yasuhiroki/github-actions-yaml.vim'
 call plug#end()
@@ -96,3 +96,4 @@ let g:rehash256 = 1
 let g:loaded_python_provider = 1 " disable python
 nmap <silent> <C-k> <Plug>(ale_previous_wrap)
 nmap <silent> <C-j> <Plug>(ale_next_wrap)
+call deoplete#custom#option('auto_complete_delay', 100)
