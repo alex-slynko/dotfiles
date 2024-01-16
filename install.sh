@@ -55,6 +55,8 @@ function link_to() {
 brew -h > /dev/null || /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 brew bundle
 brew upgrade
+gh extension install github/gh-copilot
+gh extension upgrade --all
 pypy_version=$(pyenv install --list | grep -vE '(^Available versions:|-src|dev|rc|alpha|beta|(a|b)[0-9]+)' | grep 'pypy' | tail -1 | tr -d '[:space:]')
 echo "Installing pypy $pypy_version"
 pyenv install "$pypy_version"
