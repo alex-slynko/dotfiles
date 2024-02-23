@@ -52,6 +52,7 @@ bindkey '^xe' edit-command-line
 bindkey '^x^e' edit-command-line
 source <(conftest completion zsh)
 source <(kubectl completion zsh)
+source <(argocd completion zsh)
 
 export PYENV_ROOT="$HOME/.pyenv"
 command -v pyenv >/dev/null || export PATH="$PYENV_ROOT/bin:$PATH"

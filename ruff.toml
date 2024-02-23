@@ -1,6 +1,7 @@
 select = ["ALL"]
 ignore = ["COM812", "COM819", "C901", "ANN", "DTZ", "TD", "D", "S101", "F405", "PD901", "Q000",
-"PLC1901", "PLR0911", "PLR2004", "PLR0913", "FBT002", "G001", "G002", "G004"]
+"PLC1901", "PLR0911", "PLR2004", "PLR0913", "FBT002", "G001", "G002", "G004", "CPY"]
+preview = true
 
 # Disable some Pyflakes codes:
    # D pydocstyle
@@ -19,6 +20,7 @@ ignore = ["COM812", "COM819", "C901", "ANN", "DTZ", "TD", "D", "S101", "F405", "
    # G001 - Logging statement uses string formatting
    # G002 - Logging statement uses string concatenation
    # G004 - Logging uses f-string
+   # CPY - Disable copyright warning
 
 
 # Tempporarily disable some codes:
