@@ -40,6 +40,7 @@ Plug 'neovim/nvim-lspconfig', { 'do': ':UpdateRemotePlugins' }
 Plug 'dense-analysis/ale'
 Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
 Plug 'fatih/vim-go', { 'tag': '*', 'do': ':GoInstallBinaries' }
+Plug 'numirias/semshi', { 'do': ':UpdateRemotePlugins' }
 Plug 'janko-m/vim-test'
 Plug 'github/copilot.vim', { 'do': ':Copilot setup' }
 Plug 'tpope/vim-liquid'
@@ -57,7 +58,33 @@ Plug 'https://gitlab.com/HiPhish/desktop-notify.nvim'
 Plug 'numirias/semshi', { 'do': 'UpdateRemotePlugins' }
 Plug 'Vimjas/vim-python-pep8-indent'
 Plug 'yasuhiroki/github-actions-yaml.vim'
+Plug 'bogado/file-line'
+Plug 'ludovicchabant/vim-gutentags'
+Plug 'CopilotC-Nvim/CopilotChat.nvim', { 'do': ':UpdateRemotePlugins' }
 call plug#end()
+lua << EOF
+local copilot_chat = require("CopilotChat")
+copilot_chat.setup({
+  debug = true,
+  show_help = "yes",
+  prompts = {
+    R = "Review the following code and provide concise suggestions.",
+    T = "Briefly explain how the selected code works, then generate unit tests.",
+    Ref = "Refactor the code to improve clarity and readability.",
+  },
+  build = function()
+    vim.notify("Please update the remote plugins by running ':UpdateRemotePlugins', then restart Neovim.")
+  end,
+  event = "VeryLazy",
+})
+
+EOF
+
+nnoremap <leader>ccb <cmd>CopilotChatBuffer<cr>
+nnoremap <leader>cce <cmd>CopilotChatExplain<cr>
+nnoremap <leader>cct <cmd>CopilotChatTests<cr>
+xnoremap <leader>ccv :CopilotChatVisual<cr>
+xnoremap <leader>ccx :CopilotChatInPlace<cr>
 
 autocmd Filetype groovy setlocal tabstop=4
 
