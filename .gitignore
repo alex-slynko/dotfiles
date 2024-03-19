@@ -13,6 +13,7 @@ config/htop
 config/iterm2
 config/nvim/autoload/plug.vim.old
 config/xbuild/
+config/argocd
 local/bin
 local/pipx/
 local/share/Microsoft
