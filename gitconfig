@@ -10,8 +10,10 @@
 [core]
   editor = /usr/local/bin/nvim
   hooksPath = ~/.githooks
+	excludesfile = ~/.gitignore
 [push]
   default = current
+  autoSetupRemote = true
 [color "status"]
   added = yellow
   changed = green
