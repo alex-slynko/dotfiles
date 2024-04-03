@@ -51,8 +51,6 @@
 [user]
 	email = alex-slynko@github.com
 	name = Oleksandr Slynko
-[gpg]
-	program = gpg
 [init]
 	defaultBranch = main
 [filter "lfs"]
