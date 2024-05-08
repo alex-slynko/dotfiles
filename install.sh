@@ -53,6 +53,7 @@ else
   gh extension upgrade --all
   pypy_version=$(pyenv install --list | grep -vE '(^Available versions:|-src|dev|rc|alpha|beta|(a|b)[0-9]+)' | grep 'pypy' | tail -1 | tr -d '[:space:]')
   echo "Installing pypy $pypy_version"
+  pyenv uninstall -f "$pypy_version" || true
   pyenv install "$pypy_version"
   pyenv global "$pypy_version"
   gem install neovim brakeman debride reek rubocop solargraph standardrb ruumba mdl
