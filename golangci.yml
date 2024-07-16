@@ -1,14 +1,8 @@
 run:
-  # which dirs to skip: they won't be analyzed;
   timeout: 20m
-  go: 1.18
-  skip-dirs:
-    - vendor
+  go: 1.22
 
 linters-settings:
-  govet:
-    # report about shadowed variables
-    check-shadowing: true
   gocyclo:
     # minimal code complexity to report
     min-complexity: 10
@@ -62,6 +56,7 @@ linters:
     - gofumpt
     # whitespaces are not that important
     - wsl
+    - paralleltest
 
 issues:
   exclude-use-default: false

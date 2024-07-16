@@ -1,5 +1,6 @@
-select = ["ALL"]
-ignore = ["COM812", "COM819", "C901", "ANN", "DTZ", "TD", "D", "S101", "F405", "PD901", "Q000",
+target-version = "py39"
+lint.select = ["ALL"]
+lint.ignore = ["COM812", "COM819", "C901", "ANN", "DTZ", "TD", "D", "S101", "F405", "PD901", "Q000",
 "PLC1901", "PLR0911", "PLR2004", "PLR0913", "FBT002", "G001", "G002", "G004", "CPY"]
 preview = true
 
@@ -76,11 +77,11 @@ preview = true
  # NPY NumPy-specific rules
  # RUF Ruff-specific rules
 # Allow autofix for all enabled rules (when `--fix`) is provided.
-fixable = ["A", "B", "C", "D", "E", "F", "G", "I", "N", "Q", "S", "T", "W", "ANN", "ARG", "BLE", "COM", "DJ", "DTZ", "EM", "ERA", "EXE", "FBT", "ICN", "INP", "ISC", "NPY", "PD", "PGH", "PIE", "PL", "PT", "PTH", "PYI", "RET", "RSE", "RUF", "SIM", "SLF", "TCH", "TID", "TRY", "UP", "YTT"]
-unfixable = []
+lint.fixable = ["A", "B", "C", "D", "E", "F", "G", "I", "N", "Q", "S", "T", "W", "ANN", "ARG", "BLE", "COM", "DJ", "DTZ", "EM", "ERA", "EXE", "FBT", "ICN", "INP", "ISC", "NPY", "PD", "PGH", "PIE", "PL", "PT", "PTH", "PYI", "RET", "RSE", "RUF", "SIM", "SLF", "TCH", "TID", "TRY", "UP", "YTT"]
+lint.unfixable = []
 
 # Exclude a variety of commonly ignored directories.
-exclude = [
+lint.exclude = [
     ".bzr",
     ".direnv",
     ".eggs",
