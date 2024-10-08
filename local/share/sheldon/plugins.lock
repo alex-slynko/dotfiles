@@ -1,4 +1,4 @@
-version = "0.7.4"
+version = "0.8.0"
 home = "/Users/oleksandr.slynko"
 config_dir = "/Users/oleksandr.slynko/.config/sheldon"
 data_dir = "/Users/oleksandr.slynko/.local/share/sheldon"
@@ -69,9 +69,9 @@ apply = ["source"]
 [plugins.hooks]
 
 [templates]
-PATH = "export PATH=\"{{ dir }}:$PATH\""
-path = "path=( \"{{ dir }}\" $path )"
-fpath = "fpath=( \"{{ dir }}\" $fpath )"
-source = """
-{{ hooks?.pre | nl }}{% for file in files %}source \"{{ file }}\"
-{% endfor %}{{ hooks?.post | nl }}"""
+PATH = 'export PATH="{{ dir }}:$PATH"'
+path = 'path=( "{{ dir }}" $path )'
+fpath = 'fpath=( "{{ dir }}" $fpath )'
+source = '''
+{{ hooks?.pre | nl }}{% for file in files %}source "{{ file }}"
+{% endfor %}{{ hooks?.post | nl }}'''

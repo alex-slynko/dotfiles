@@ -51,21 +51,14 @@ else
   brew upgrade
   gh extension install github/gh-copilot
   gh extension upgrade --all
-  pypy_version=$(pyenv install --list | grep -vE '(^Available versions:|-src|dev|rc|alpha|beta|(a|b)[0-9]+)' | grep 'pypy' | tail -1 | tr -d '[:space:]')
-  echo "Installing pypy $pypy_version"
-  pyenv uninstall -f "$pypy_version" || true
-  pyenv install "$pypy_version"
-  pyenv global "$pypy_version"
   gem install neovim brakeman debride reek rubocop solargraph standardrb ruumba mdl
   go install github.com/mrtazz/checkmake/cmd/checkmake@latest
   go install github.com/onsi/ginkgo/v2/ginkgo@latest
   nvim +PlugUpgrade +PlugUpdate +qa --headless
-  for version in $(pyenv versions --bare); do
-    pyenv local "$version"
-    echo "Installing python packages for $version"
-    pip install --upgrade pip --quiet
-    pip install --upgrade pynvim neovim yamlfix spectral yamllint gitlint ruff --quiet
-  done
+  uv tool install pynvim
+  uv tool install neovim
+  uv tool install gitlint
+  uv tool install ruff
 
   npm install -g swaglint neovim bash-language-server fixjson @stoplight/spectral alex markdownlint @githubnext/github-copilot-cli
   sheldon lock --update

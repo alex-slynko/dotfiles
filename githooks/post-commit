@@ -8,5 +8,5 @@ message="$(date -I) $(head -1 "$root_dir/.git/COMMIT_EDITMSG")"
 mkdir -p "$HOME/memory/$dirname"
 
 imagesnap -q -w 0.5 /tmp/test.jpg
-convert /tmp/test.jpg -gravity North -pointsize 30 -annotate +0+100 "$message" "$HOME/memory/$dirname/$(date +%s)_$(git rev-parse HEAD).jpg"
+magick /tmp/test.jpg -gravity North -pointsize 30 -annotate +0+100 "$message" "$HOME/memory/$dirname/$(date +%s)_$(git rev-parse HEAD).jpg"
 

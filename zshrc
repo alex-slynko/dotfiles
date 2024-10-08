@@ -55,12 +55,10 @@ source <(kubectl completion zsh)
 source <(argocd completion zsh)
 source <(gh completion -s zsh)
 
-export PYENV_ROOT="$HOME/.pyenv"
-command -v pyenv >/dev/null || export PATH="$PYENV_ROOT/bin:$PATH"
-eval "$(pyenv init -)"
 export PATH="$PATH:$HOME/.dotnet/tools"
 
 autoload -U +X bashcompinit && bashcompinit
 complete -o nospace -C /opt/homebrew/bin/terraform terraform
 export DOCKER_DEFAULT_PLATFORM=linux/amd64
 
+eval "$(uv generate-shell-completion zsh)"
