@@ -18,3 +18,4 @@ if brew -h > /dev/null; then
 fi
 
 complete -C /opt/homebrew/bin/terraform terraform
+. "$HOME/.cargo/env"

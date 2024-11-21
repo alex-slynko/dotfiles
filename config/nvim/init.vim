@@ -72,11 +72,11 @@ let g:ale_fixers = {
 \   'yaml':  ['prettier', 'yamlfix'],
 \   'ruby': ['rubocop', 'rufo', 'standardrb' ],
 \   'sh': ['shfmt'],
-\   'python': [ 'black', 'add_blank_lines_for_python_control_statements', 'autopep8', 'isort', 'yapf', 'pycln', 'pyflyby', 'ruff', 'reorder-python-imports' ],
+\   'python': [ 'add_blank_lines_for_python_control_statements', 'ruff' ],
 \ }
 let g:ale_linters = {
 \   'yaml': ['yamllint'],
-\   'python': ['flake8', 'flakehell', 'mypy', 'pylint', 'pyright', 'pyre', 'pylsp', 'pydocstyle', 'pyflakes', 'pylama', 'pylint', 'pylsp', 'pyre', 'pyright', 'refurb', 'ruff', 'unimport', 'vulture'],
+\   'python': ['mypy', 'ruff', 'unimport', 'vulture'],
 \ }
 
 " save on enter

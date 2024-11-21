@@ -9,7 +9,7 @@
   whitespace = nowarn
 [core]
   editor = /usr/local/bin/nvim
-  hooksPath = ~/.githooks
+  ; hooksPath = ~/.githooks
 	excludesfile = ~/.gitignore
 [push]
   default = current

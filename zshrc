@@ -62,3 +62,5 @@ complete -o nospace -C /opt/homebrew/bin/terraform terraform
 export DOCKER_DEFAULT_PLATFORM=linux/amd64
 
 eval "$(uv generate-shell-completion zsh)"
+alias pytest='uv run pytest'
+alias ruff='uv run ruff'
