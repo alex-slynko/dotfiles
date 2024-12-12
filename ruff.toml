@@ -1,6 +1,6 @@
 lint.select = ["ALL"]
 lint.ignore = ["COM812", "COM819", "C901", "ANN", "DTZ", "TD", "D", "S101", "F405", "PD901", "Q000",
-"PLC1901", "PLR0911", "PLR2004", "PLR0913", "FBT002", "G001", "G002", "G004", "CPY"]
+"PLC1901", "PLR0911", "PLR2004", "PLR0913", "FBT002", "G001", "G002", "G004", "CPY", "DOC201", "DOC501", "EM101", "TRY003"]
 preview = true
 
 # Disable some Pyflakes codes:
