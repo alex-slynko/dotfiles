@@ -1,6 +1,7 @@
+line-length = 160
 lint.select = ["ALL"]
 lint.ignore = ["COM812", "COM819", "C901", "ANN", "DTZ", "TD", "D", "S101", "F405", "PD901", "Q000",
-"PLC1901", "PLR0911", "PLR2004", "PLR0913", "FBT002", "G001", "G002", "G004", "CPY", "DOC201", "DOC501", "EM101", "TRY003"]
+"PLC1901", "PLR0911", "PLR2004", "PLR0913", "FBT002", "G001", "G002", "G004", "CPY", "DOC201", "DOC501", "EM101", "TRY003", "ISC001"]
 preview = true
 
 # Disable some Pyflakes codes:
@@ -21,6 +22,11 @@ preview = true
    # G002 - Logging statement uses string concatenation
    # G004 - Logging uses f-string
    # CPY - Disable copyright warning
+   # DOC201 - No blank lines allowed before class docstring
+   # DOC501 - No blank lines allowed before function docstring
+   # EM101 - Using separate class for exceptions is overhead in our small projects
+   # TRY003 - Allow too many except statements
+   # ISC001 - Allow implicit string concatenation. It does not work well with formatter
 
 
 # Tempporarily disable some codes:
@@ -105,5 +111,17 @@ lint.exclude = [
     "docs"
 ]
 
-line-length = 120
+target-version = "py311"
 
+[lint.per-file-ignores]
+"tests/**/*.py" = [
+    "ARG001", # unused arguments are needed for mocking
+    "S101", # asserts allowed in tests...
+    "SLF001", # access private methods allowed in tests...
+]
+"script/*" = [
+  "T201"
+]
+
+[format]
+quote-style = "preserve"
