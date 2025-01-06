@@ -6,6 +6,7 @@ cutstring="DO NOT EDIT BELOW THIS LINE"
 # CODESPACES=true
 
 if [ "${CODESPACES:-false}" = "true" ]; then
+  rm "$HOME/.gitconfig"
   ln -s "$PWD/gitconfig" "$HOME/.gitconfig"
   ln -s "$PWD/gitignore" "$HOME/.gitignore"
   ln -s "$PWD/gitmessage" "$HOME/.gitmessage"
@@ -55,11 +56,14 @@ else
   go install github.com/mrtazz/checkmake/cmd/checkmake@latest
   go install github.com/onsi/ginkgo/v2/ginkgo@latest
   nvim +PlugUpgrade +PlugUpdate +qa --headless
-  uv tool install pynvim
-  uv tool install neovim
-  uv tool install gitlint
-  uv tool install ruff
+  uv tool install pynvim --upgrade
+  uv tool install neovim --upgrade
 
   npm install -g swaglint neovim bash-language-server fixjson @stoplight/spectral alex markdownlint @githubnext/github-copilot-cli
   sheldon lock --update
+fi
+
+if which uv > /dev/null; then
+  uv tool install gitlint --upgrade
+  uv tool install ruff --upgrade
 fi
