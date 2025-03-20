@@ -23,14 +23,20 @@
 [diff]
   wordRegex = [^[:space:]]
   algorithm = patience
+	colorMoved = plain
+	mnemonicPrefix = true
+	renames = true
 [help]
-	autocorrect = 1
+	autocorrect = 2
 [advice]
 	statusHints = false
 [branch]
 	autosetuprebase = always
+	sort = -committerdate
 [fetch]
 	prune = true
+	pruneTags = true
+	all = true
 [pull]
 	rebase = true
 [rebase]

@@ -1,4 +1,4 @@
-version = "0.8.0"
+version = "0.8.1"
 home = "/Users/oleksandr.slynko"
 config_dir = "/Users/oleksandr.slynko/.config/sheldon"
 data_dir = "/Users/oleksandr.slynko/.local/share/sheldon"
