@@ -13,6 +13,7 @@ if [ "${CODESPACES:-false}" = "true" ]; then
   ln -s "$PWD/ruff.toml" "$HOME/.ruff.toml"
   ln -s "$PWD/golangci.yaml" "$HOME/.golangci.yaml"
   ln -s "$PWD/config/yamllint" "$HOME/.config/yamllint"
+  git config unset --global core.editor || true
 
 else
   for name in *; do
@@ -61,6 +62,7 @@ else
 
   npm install -g swaglint neovim bash-language-server fixjson @stoplight/spectral alex markdownlint @githubnext/github-copilot-cli
   sheldon lock --update
+  az extension add --name kusto || true
 fi
 
 if which uv > /dev/null; then
