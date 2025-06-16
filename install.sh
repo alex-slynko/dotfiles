@@ -4,9 +4,8 @@ set -eu -o pipefail
 cutstring="DO NOT EDIT BELOW THIS LINE"
 
 # CODESPACES=true
-
 if [ "${CODESPACES:-false}" = "true" ]; then
-  rm "$HOME/.gitconfig"
+  rm "$HOME/.gitconfig" || true
   ln -s "$PWD/gitconfig" "$HOME/.gitconfig"
   ln -s "$PWD/gitignore" "$HOME/.gitignore"
   ln -s "$PWD/gitmessage" "$HOME/.gitmessage"
