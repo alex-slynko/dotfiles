@@ -64,3 +64,5 @@ export DOCKER_DEFAULT_PLATFORM=linux/amd64
 eval "$(uv generate-shell-completion zsh)"
 alias pytest='uv run pytest'
 alias ruff='uv run ruff'
+
+export PATH="/opt/homebrew/opt/openjdk@21/bin:$PATH"

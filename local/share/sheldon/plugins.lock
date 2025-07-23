@@ -1,4 +1,4 @@
-version = "0.8.1"
+version = "0.8.3"
 home = "/Users/oleksandr.slynko"
 config_dir = "/Users/oleksandr.slynko/.config/sheldon"
 data_dir = "/Users/oleksandr.slynko/.local/share/sheldon"
@@ -72,6 +72,6 @@ apply = ["source"]
 PATH = 'export PATH="{{ dir }}:$PATH"'
 path = 'path=( "{{ dir }}" $path )'
 fpath = 'fpath=( "{{ dir }}" $fpath )'
-source = '''
+source = """
 {{ hooks?.pre | nl }}{% for file in files %}source "{{ file }}"
-{% endfor %}{{ hooks?.post | nl }}'''
+{% endfor %}{{ hooks?.post | nl }}"""
