@@ -68,3 +68,7 @@ if which uv > /dev/null; then
   uv tool install gitlint-core --upgrade
   uv tool install ruff --upgrade
 fi
+
+if which softwareupdate > /dev/null; then
+  sudo softwareupdate --all --install --force
+fi
