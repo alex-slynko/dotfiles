@@ -40,7 +40,7 @@ Plug 'neovim/nvim-lspconfig', { 'do': ':UpdateRemotePlugins' }
 Plug 'dense-analysis/ale'
 Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
 Plug 'fatih/vim-go', { 'tag': '*', 'do': ':GoInstallBinaries' }
-Plug 'numirias/semshi', { 'do': ':UpdateRemotePlugins' }
+"Plug 'numirias/semshi', { 'do': ':UpdateRemotePlugins' }
 Plug 'janko-m/vim-test'
 Plug 'github/copilot.vim', { 'do': ':Copilot setup' }
 Plug 'tpope/vim-liquid'
@@ -54,7 +54,6 @@ Plug 'hashivim/vim-terraform'
 Plug 'HiPhish/jinja.vim'
 Plug 'noahfrederick/vim-jekyll'
 Plug 'https://gitlab.com/HiPhish/desktop-notify.nvim'
-Plug 'numirias/semshi', { 'do': 'UpdateRemotePlugins' }
 Plug 'Vimjas/vim-python-pep8-indent'
 Plug 'yasuhiroki/github-actions-yaml.vim'
 Plug 'bogado/file-line'
