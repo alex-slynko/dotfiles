@@ -53,7 +53,7 @@ else
   gh extension install github/gh-copilot
   gh extension upgrade --all
   gem install neovim brakeman debride reek rubocop solargraph standardrb ruumba mdl
-  go install github.com/checkmake/checkmake/cmd/checkmake@latest
+  # go install github.com/checkmake/checkmake/cmd/checkmake@latest
   go install github.com/onsi/ginkgo/v2/ginkgo@latest
   nvim +PlugUpgrade +PlugUpdate +qa --headless
   uv tool install pynvim --upgrade || true
@@ -72,3 +72,4 @@ fi
 if which softwareupdate > /dev/null; then
   sudo softwareupdate --all --install --force
 fi
+mkdir -p $HOME/.copilot
