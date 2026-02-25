@@ -50,7 +50,6 @@ else
   brew -h > /dev/null || /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
   brew bundle
   brew upgrade
-  gh extension install github/gh-copilot
   gh extension upgrade --all
   gem install neovim brakeman debride reek rubocop solargraph standardrb ruumba mdl
   # go install github.com/checkmake/checkmake/cmd/checkmake@latest
@@ -59,7 +58,7 @@ else
   uv tool install pynvim --upgrade || true
   uv tool install neovim --upgrade || true
 
-  npm install -g swaglint neovim bash-language-server fixjson @stoplight/spectral alex markdownlint @githubnext/github-copilot-cli
+  npm install -g swaglint neovim bash-language-server fixjson @stoplight/spectral alex markdownlint
   sheldon lock --update
   az extension add --name kusto || true
 fi
@@ -73,3 +72,13 @@ if which softwareupdate > /dev/null; then
   sudo softwareupdate --all --install --force
 fi
 mkdir -p $HOME/.copilot
+mkdir -p $HOME/.copilot/agents
+if ! [ -L "$HOME/.copilot/copilot-instructions.md" ]; then
+  ln -s prompt.md $HOME/.copilot/copilot-instructions.md
+fi
+for agent in instructions/*.agent.md; do
+  agent_name=$(basename "$agent")
+  if ! [ -L "$HOME/.copilot/agents/$agent_name" ]; then
+    ln -s "$PWD/$agent" "$HOME/.copilot/agents/$agent_name"
+  fi
+done
