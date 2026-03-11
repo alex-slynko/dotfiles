@@ -74,7 +74,7 @@ fi
 mkdir -p $HOME/.copilot
 mkdir -p $HOME/.copilot/agents
 if ! [ -L "$HOME/.copilot/copilot-instructions.md" ]; then
-  ln -s prompt.md $HOME/.copilot/copilot-instructions.md
+  ln -s $PWD/prompt.md $HOME/.copilot/copilot-instructions.md
 fi
 for agent in instructions/*.agent.md; do
   agent_name=$(basename "$agent")
