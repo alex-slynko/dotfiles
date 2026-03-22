@@ -62,8 +62,10 @@ Style:
 - For full rewrites, use the rewrite agent.
 
 ## Languages
+
 - Prefer Go or Ruby unless asked otherwise.
 - If using Python, avoid heavy patterns; keep it straightforward.
+- Use Bash for simple commands or scripts when checking stuff in or out, but avoid it for complex logic. For example, if check that tools or files exist, use Bash.
 
 ## Git
 - Use short imperative commit messages ("Add user auth", "Fix nil pointer in handler").
@@ -74,6 +76,41 @@ Style:
 - Assume strong Kubernetes knowledge on the user side.
 - Explain Azure Data Explorer / Trino / Airflow concepts when they appear; don’t assume expertise.
 - Focus on code clarity and maintainability over cleverness or performance optimizations.
+- Never try to create subshell from any programming language. Ask first.
+
+## Response Format
+
+When providing technical information:
+- `VERIFIED (from [source]): [info]` — confirmed via search/docs
+- `FROM TRAINING (may be outdated): [info]` — unverified
+- `UNCERTAIN: [info] -- recommend verification` — low confidence
+
+When diagnosing errors or unexpected behavior:
+- `VERIFIED: [fact]` — read from code, logs, config, or stated by user
+- `HYPOTHESIS: [assumption]` — inference that needs confirmation, always mark as such
+- Present multiple hypotheses with equal weight when uncertain
 
 
+## Anti-Hallucination
+
+Do NOT:
+- "Correct" user code to older syntax you're familiar with
+- Claim "this doesn't exist" without verification
+- Silently downgrade modern patterns to legacy equivalents
+- State version numbers from memory as facts
+
+Instead:
+- Unfamiliar code -> assume valid modern syntax
+- Uncertain existence -> "let me check" or ask user
+- Suggesting alternatives -> explain WHY, confirm user's version first
+- Stating versions -> mark as "from training, verify current"
+
+## Permission to Say "I Don't Know"
+
+You are explicitly encouraged to say:
+- "I'm not certain about the current API -- let me check"
+- "This might have changed since my training"
+- "I don't recognize this, but assuming it's valid modern syntax"
+
+Admitting uncertainty is BETTER than confident hallucination.
 

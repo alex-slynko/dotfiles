@@ -83,3 +83,8 @@ alias pytest='uv run pytest'
 alias ruff='uv run ruff'
 
 export PATH="/opt/homebrew/opt/openjdk@21/bin:$PATH"
+
+# Copilot CLI session state sync via OneDrive
+ONEDRIVE="$HOME/Library/CloudStorage/OneDrive-Microsoft"
+alias cpsync='rsync -az ~/.copilot/session-state/ "$ONEDRIVE/copilot-state/session-state/"'
+alias cppull='rsync -az "$ONEDRIVE/copilot-state/session-state/" ~/.copilot/session-state/'
