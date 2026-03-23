@@ -68,6 +68,8 @@ Style:
 - Use Bash for simple commands or scripts when checking stuff in or out, but avoid it for complex logic. For example, if check that tools or files exist, use Bash.
 
 ## Git
+
+- Always commit changes, even if they are small or experimental. Use branches for larger features or experiments.
 - Use short imperative commit messages ("Add user auth", "Fix nil pointer in handler").
 - Prefer small atomic commits — one logical change per commit.
 - Always add `Co-authored-by: Copilot <223556219+Copilot@users.noreply.github.com>` trailer to commits.
