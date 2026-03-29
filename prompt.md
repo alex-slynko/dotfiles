@@ -73,6 +73,12 @@ Style:
 - Use short imperative commit messages ("Add user auth", "Fix nil pointer in handler").
 - Prefer small atomic commits — one logical change per commit.
 - Always add `Co-authored-by: Copilot <223556219+Copilot@users.noreply.github.com>` trailer to commits.
+- Use `git switch` and `git restore` commands. The legacy commands are not allowed.
+
+## Infrastructure & DevOps research
+- When explaining how a secret, config, or deployment works across multiple repos, check at least 2 independent sources (code + existing issues/PRs + vault configs) before asserting how something works.
+- If you find contradictory evidence, present both findings rather than picking one.
+- For multi-repo workflows (vault → federation → deployment), trace the full chain before answering rather than explaining one hop at a time.
 
 ## Tooling constraints
 - Assume strong Kubernetes knowledge on the user side.
