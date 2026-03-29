@@ -73,8 +73,12 @@ if which softwareupdate > /dev/null; then
 fi
 mkdir -p $HOME/.copilot
 mkdir -p $HOME/.copilot/agents
+mkdir -p $HOME/.copilot/instructions
 if ! [ -L "$HOME/.copilot/copilot-instructions.md" ]; then
   ln -s $PWD/prompt.md $HOME/.copilot/copilot-instructions.md
+fi
+if ! [ -L "$HOME/.copilot/instructions/prompt.instructions.md" ]; then
+  ln -s "$PWD/prompt.md" "$HOME/.copilot/instructions/prompt.instructions.md"
 fi
 for agent in instructions/*.agent.md; do
   agent_name=$(basename "$agent")
