@@ -85,3 +85,16 @@ for agent in instructions/*.agent.md; do
     ln -s "$PWD/$agent" "$HOME/.copilot/agents/$agent_name"
   fi
 done
+
+vscode_agent_dirs=(
+  "$HOME/Library/Application Support/Code/User/agents"
+  "$HOME/Library/Application Support/Code - Insiders/User/agents"
+)
+for agents_dir in "${vscode_agent_dirs[@]}"; do
+  if [ -d "$(dirname "$agents_dir")" ]; then
+    mkdir -p "$agents_dir"
+    if ! [ -L "$agents_dir/tdd.agent.md" ]; then
+      ln -s "$PWD/instructions/tdd.agent.md" "$agents_dir/tdd.agent.md"
+    fi
+  fi
+done
