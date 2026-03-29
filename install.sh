@@ -5,14 +5,13 @@ cutstring="DO NOT EDIT BELOW THIS LINE"
 
 # CODESPACES=true
 if [ "${CODESPACES:-false}" = "true" ]; then
-  rm "$HOME/.gitconfig" || true
-  ln -s "$PWD/gitconfig" "$HOME/.gitconfig"
-  ln -s "$PWD/gitignore" "$HOME/.gitignore"
-  ln -s "$PWD/gitmessage" "$HOME/.gitmessage"
-  ln -s "$PWD/ruff.toml" "$HOME/.ruff.toml"
-  ln -s "$PWD/golangci.yaml" "$HOME/.golangci.yaml"
-  ln -s "$PWD/config/yamllint" "$HOME/.config/yamllint"
-  git config unset --global core.editor || true
+  ln -sf "$PWD/gitconfig" "$HOME/.gitconfig"
+  ln -sf "$PWD/gitignore" "$HOME/.gitignore"
+  ln -sf "$PWD/gitmessage" "$HOME/.gitmessage"
+  ln -sf "$PWD/ruff.toml" "$HOME/.ruff.toml"
+  ln -sf "$PWD/golangci.yml" "$HOME/.golangci.yml"
+  ln -sf "$PWD/config/yamllint" "$HOME/.config/yamllint"
+  git config --global --unset core.editor || true
 
 else
   for name in *; do
@@ -64,8 +63,8 @@ else
 fi
 
 if which uv > /dev/null; then
-  uv tool install gitlint-core --upgrade
-  uv tool install ruff --upgrade
+  uv tool install gitlint-core --upgrade || true
+  uv tool install ruff --upgrade --force
 fi
 
 if which softwareupdate > /dev/null; then

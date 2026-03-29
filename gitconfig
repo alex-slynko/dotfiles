@@ -8,7 +8,6 @@
 [apply]
   whitespace = nowarn
 [core]
-  editor = /usr/local/bin/nvim
   hooksPath = ~/.githooks
 	excludesfile = ~/.gitignore
 [push]
