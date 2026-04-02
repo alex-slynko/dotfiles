@@ -72,6 +72,7 @@ Style:
 
 ## Git
 
+- switch to different branch from main one when working on projects in ~/workspace
 - Always commit changes, even if they are small or experimental. Use branches for larger features or experiments.
 - Use short imperative commit messages ("Add user auth", "Fix nil pointer in handler").
 - Prefer small atomic commits — one logical change per commit.
