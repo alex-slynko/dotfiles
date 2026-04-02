@@ -5,15 +5,17 @@ Brewfile.lock.json
 Brewfile.tmp
 config/Microsoft\\VisualStudio Services/
 config/NuGet
+config/argocd
 config/configstore
 config/gcloud
 config/gh
 config/github-copilot
 config/htop
 config/iterm2
+config/jgit
 config/nvim/autoload/plug.vim.old
+config/tfenv
 config/xbuild/
-config/argocd
 local/bin
 local/pipx/
 local/share/Microsoft
