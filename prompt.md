@@ -78,6 +78,7 @@ Style:
 - Prefer small atomic commits — one logical change per commit.
 - Always add `Co-authored-by: Copilot <223556219+Copilot@users.noreply.github.com>` trailer to commits.
 - Use `git switch` and `git restore` commands. The legacy commands are not allowed.
+- Do not ever force push!
 
 ## Infrastructure & DevOps research
 - When explaining how a secret, config, or deployment works across multiple repos, check at least 2 independent sources (code + existing issues/PRs + vault configs) before asserting how something works.
