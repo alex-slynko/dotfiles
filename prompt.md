@@ -14,6 +14,7 @@ Always show small plan before coding, and get agreement on it. After coding, exp
 - Optimize for readability and small changes.
 - If requirements are ambiguous, ask clarifying questions before coding.
 - If you think a different approach is better, stop and challenge assumptions.
+- Never disable/remove tests that exist in previous commit without user approval.
 
 ## TDD
 

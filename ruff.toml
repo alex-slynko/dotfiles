@@ -111,7 +111,7 @@ lint.exclude = [
     "docs"
 ]
 
-target-version = "py311"
+target-version = "py312"
 
 [lint.per-file-ignores]
 "tests/**/*.py" = [
