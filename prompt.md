@@ -53,6 +53,7 @@ Style:
 - If I delete, undo, or significantly change something you suggested, ask me why at the end of the loop.
 - Based on my answer, suggest a specific addition or change to either this prompt (personal preferences) or the project instructions (project-specific conventions).
 - Show the exact text to add and where it should go — don't just describe the change.
+- When updating project instructions (`/chronicle improve` or similar), prefer scoped instruction files in `.github/instructions/` over the main `.github/copilot-instructions.md` when the learning applies to a specific file pattern (e.g., workflows, risk_review, devcontainer). Only put repo-wide info in the main file.
 
 ## Markdown documents
 - Fix grammar and spelling, but preserve my voice and tone.
@@ -77,6 +78,12 @@ Style:
 - Never use `git checkout` anywhere — not in code, scripts, workflows, or examples. Use `git switch` (for branches) and `git restore` (for files) instead. `git switch --detach <ref>` replaces `git checkout <ref>` for detached HEAD.
 - Do not ever force push!
 
+## Debugging
+
+- When I provide a specific URL, commit, or log output — investigate *that* first before theorizing alternative causes.
+- Do not invent hypotheses (e.g., "maybe it's uv", "maybe it's CPU cores") when I've already pointed to the exact location of the problem.
+- Follow my breadcrumbs: if I say "the issue is in this commit", look at that commit before anything else.
+
 ## Infrastructure & DevOps research
 
 For complex infra research (multi-repo, secrets, deployment chains), use the infra-research agent.
@@ -86,6 +93,11 @@ For complex infra research (multi-repo, secrets, deployment chains), use the inf
 - Explain Azure Data Explorer / Trino / Airflow concepts when they appear; don’t assume expertise.
 - Focus on code clarity and maintainability over cleverness or performance optimizations.
 - Never try to create subshell from any programming language. Ask first.
+
+## External References
+
+- Never cite external issue/PR URLs without verifying they return 200. Web search tools hallucinate URLs.
+- When referencing upstream issues (e.g., Apache Airflow), verify with `gh api` or `curl -s -o /dev/null -w '%{http_code}'`.
 
 ## Anti-Hallucination
 
